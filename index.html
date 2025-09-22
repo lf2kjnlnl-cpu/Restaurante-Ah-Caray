@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Restaurante AH CARAY</title>
+  <meta name="description" content="Restaurante AH CARAY — Jocoro. Menú, horarios, ubicación, contacto, misión y valores." />
+  <!-- Tailwind vía CDN (no requiere instalación) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Iconos Lucide -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    /* Tipografía mínima sin dependencias */
+    :root { --brand: #f59e0b; }
+    .gradient { background: linear-gradient(135deg, rgba(0,0,0,.6), rgba(0,0,0,.2)); }
+    .glass { background: rgba(255,255,255,.08); backdrop-filter: blur(10px); }
+  </style>
+</head>
+<body class="bg-stone-50 text-stone-800">
+  <!-- NAV -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-stone-200">
+    <nav class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2 font-bold text-lg">
+        <span class="inline-block w-3 h-3 rounded-full" style="background: var(--brand)"></span>
+        AH CARAY
+      </a>
+      <div class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#menu" class="hover:text-amber-600">Menú</a>
+        <a href="#promos" class="hover:text-amber-600">Promociones</a>
+        <a href="#sobre" class="hover:text-amber-600">Nosotros</a>
+        <a href="#contacto" class="hover:text-amber-600">Contacto</a>
+        <a href="#reservar" class="px-3 py-2 rounded-md text-white" style="background: var(--brand)">Reservar</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative h-[70vh] flex items-center justify-center text-center">
+    <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?q=80&w=2100&auto=format&fit=crop" alt="Mesa servida" class="absolute inset-0 w-full h-full object-cover"/>
+    <div class="absolute inset-0 gradient"></div>
+    <div class="relative max-w-3xl mx-auto px-4 text-white">
+      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">Restaurante AH CARAY</h1>
+      <p class="mt-4 text-lg md:text-xl">“Ah Caray, qué rico está, cada bocado te encantará”.</p>
+      <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
+        <a href="#menu" class="px-5 py-3 rounded-md font-semibold" style="background: var(--brand)">Ver menú</a>
+        <a id="reservar" href="https://wa.me/50300000000" target="_blank" class="px-5 py-3 rounded-md font-semibold border border-white/60 hover:bg-white/10">Reservar por WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFO RÁPIDA -->
+  <section class="max-w-6xl mx-auto px-4 -mt-10 relative">
+    <div class="grid md:grid-cols-3 gap-4">
+      <div class="glass rounded-xl p-5 shadow-sm border border-white/20">
+        <div class="flex items-center gap-3"><i data-lucide="map-pin" class="w-5 h-5 text-amber-600"></i><h3 class="font-semibold">Ubicación</h3></div>
+        <p class="text-sm mt-2">Barrio San Sebastián, Jocoro — Plaza Rivera.</p>
+      </div>
+      <div class="glass rounded-xl p-5 shadow-sm border border-white/20">
+        <div class="flex items-center gap-3"><i data-lucide="clock" class="w-5 h-5 text-amber-600"></i><h3 class="font-semibold">Horarios</h3></div>
+        <p class="text-sm mt-2">Mar–Dom: <strong>7:00–14:00</strong> y <strong>17:00–22:00</strong>.</p>
+      </div>
+      <div class="glass rounded-xl p-5 shadow-sm border border-white/20">
+        <div class="flex items-center gap-3"><i data-lucide="phone" class="w-5 h-5 text-amber-600"></i><h3 class="font-semibold">Pedidos</h3></div>
+        <p class="text-sm mt-2">Servicio a domicilio • Tel: +503 0000‑0000</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENÚ -->
+  <section id="menu" class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-extrabold text-center">Nuestro Menú</h2>
+    <p class="text-center text-stone-600 mt-2">Combina platillos, bebidas y postres como quieras.</p>
+
+    <div class="mt-10 grid md:grid-cols-3 gap-6">
+      <!-- Platillos -->
+      <div class="bg-white rounded-xl shadow border border-stone-200">
+        <div class="p-5 border-b border-stone-200 flex items-center gap-2">
+          <i data-lucide="utensils" class="w-5 h-5 text-amber-600"></i>
+          <h3 class="font-bold">Platillos</h3>
+        </div>
+        <ul class="p-5 space-y-2 text-sm">
+          <li>🍔 Hamburguesas</li>
+          <li>🍗 Alitas</li>
+          <li>🍽️ Pechuga con arroz y ensalada</li>
+          <li>🥩 Carne asada</li>
+          <li>🥣 Sopas</li>
+          <li>🌮 Tacos</li>
+          <li>🌯 Burritos</li>
+        </ul>
+      </div>
+
+      <!-- Bebidas -->
+      <div class="bg-white rounded-xl shadow border border-stone-200">
+        <div class="p-5 border-b border-stone-200 flex items-center gap-2">
+          <i data-lucide="cup-soda" class="w-5 h-5 text-amber-600"></i>
+          <h3 class="font-bold">Bebidas</h3>
+        </div>
+        <ul class="p-5 space-y-2 text-sm">
+          <li>🥤 Refrescos naturales y artificiales</li>
+          <li>☕ Café</li>
+          <li>🍫 Chocolate</li>
+          <li>🥛 Capuchino</li>
+          <li>🥤 Gaseosas</li>
+          <li>🍷 Bebidas alcohólicas</li>
+        </ul>
+      </div>
+
+      <!-- Postres -->
+      <div class="bg-white rounded-xl shadow border border-stone-200">
+        <div class="p-5 border-b border-stone-200 flex items-center gap-2">
+          <i data-lucide="ice-cream" class="w-5 h-5 text-amber-600"></i>
+          <h3 class="font-bold">Postres</h3>
+        </div>
+        <ul class="p-5 space-y-2 text-sm">
+          <li>🥞 Crepas</li>
+          <li>🍰 Cheesecake</li>
+          <li>🎂 Pastel</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMOS -->
+  <section id="promos" class="bg-amber-50 border-y border-amber-100">
+    <div class="max-w-6xl mx-auto px-4 py-14">
+      <h2 class="text-2xl font-extrabold">Promociones</h2>
+      <p class="text-stone-600 mt-1 text-sm">Publica aquí tus ofertas semanales o combos.</p>
+      <div class="grid md:grid-cols-3 gap-4 mt-6">
+        <div class="p-5 bg-white rounded-xl border border-stone-200">
+          <h4 class="font-bold">Combo Alitas + Refresco</h4>
+          <p class="text-sm text-stone-600">12 alitas + refresco 16oz.</p>
+        </div>
+        <div class="p-5 bg-white rounded-xl border border-stone-200">
+          <h4 class="font-bold">Hamburguesa Doble</h4>
+          <p class="text-sm text-stone-600">Con papas y bebida.</p>
+        </div>
+        <div class="p-5 bg-white rounded-xl border border-stone-200">
+          <h4 class="font-bold">Café + Cheesecake</h4>
+          <p class="text-sm text-stone-600">Tarde dulce 2×1 miércoles.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section id="sobre" class="max-w-6xl mx-auto px-4 py-16">
+    <div class="grid md:grid-cols-2 gap-10 items-start">
+      <div>
+        <h2 class="text-3xl font-extrabold">Misión & Visión</h2>
+        <div class="mt-4 space-y-4 text-sm leading-relaxed">
+          <p><strong>Misión:</strong> Brindar experiencias inolvidables con comida deliciosa y ambiente cálido.</p>
+          <p><strong>Visión:</strong> Que nuestra web permita conocer el menú, hacer pedidos fáciles y enterarse de promociones, mostrando lo rico de nuestra comida y lo agradable de visitarnos.</p>
+        </div>
+        <h3 class="text-xl font-bold mt-8">Valores</h3>
+        <ul class="mt-3 grid grid-cols-2 gap-2 text-sm">
+          <li class="p-3 bg-white rounded border">Calidad</li>
+          <li class="p-3 bg-white rounded border">Servicio al cliente</li>
+          <li class="p-3 bg-white rounded border">Higiene</li>
+          <li class="p-3 bg-white rounded border">Trabajo en equipo</li>
+          <li class="p-3 bg-white rounded border">Honestidad</li>
+          <li class="p-3 bg-white rounded border">Hospitalidad</li>
+        </ul>
+      </div>
+      <div class="bg-white rounded-xl border border-stone-200 p-6">
+        <h3 class="text-xl font-bold">Síguenos</h3>
+        <div class="mt-3 flex gap-4 text-sm">
+          <a class="flex items-center gap-2 hover:text-amber-600" href="https://facebook.com/" target="_blank"><i data-lucide="facebook" class="w-5 h-5"></i> ¡AH CARAY!</a>
+          <a class="flex items-center gap-2 hover:text-amber-600" href="https://instagram.com/" target="_blank"><i data-lucide="instagram" class="w-5 h-5"></i> ah caray</a>
+          <a class="flex items-center gap-2 hover:text-amber-600" href="https://tiktok.com/@ahcaray.sv" target="_blank"><i data-lucide="clapperboard" class="w-5 h-5"></i> ahcaray.sv</a>
+        </div>
+        <div class="mt-6">
+          <h4 class="font-semibold">Atención al cliente</h4>
+          <p class="text-sm text-stone-600">Profesionalismo, innovación y envíos rápidos dentro de la zona.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="bg-white border-t border-stone-200">
+    <div class="max-w-6xl mx-auto px-4 py-14">
+      <h2 class="text-2xl font-extrabold">Contacto</h2>
+      <div class="grid md:grid-cols-2 gap-8 mt-6">
+        <div class="space-y-3 text-sm">
+          <p class="flex items-center gap-2"><i data-lucide="phone" class="w-5 h-5 text-amber-600"></i> <span>+503 0000‑0000</span></p>
+          <p class="flex items-center gap-2"><i data-lucide="map-pin" class="w-5 h-5 text-amber-600"></i> <span>Barrio San Sebastián, Jocoro — Plaza Rivera</span></p>
+          <p class="flex items-center gap-2"><i data-lucide="clock" class="w-5 h-5 text-amber-600"></i> <span>Mar–Dom: 7:00–14:00 / 17:00–22:00</span></p>
+        </div>
+        <form onsubmit="event.preventDefault(); alert('¡Gracias! Te contactaremos pronto.')" class="bg-stone-50 rounded-xl p-5 border border-stone-200">
+          <label class="block text-sm font-medium">Nombre</label>
+          <input class="mt-1 w-full border rounded-md px-3 py-2" placeholder="Tu nombre" required>
+          <label class="block text-sm font-medium mt-3">Teléfono o correo</label>
+          <input class="mt-1 w-full border rounded-md px-3 py-2" placeholder="Tu contacto" required>
+          <label class="block text-sm font-medium mt-3">Mensaje</label>
+          <textarea class="mt-1 w-full border rounded-md px-3 py-2" rows="4" placeholder="Quiero reservar para..." required></textarea>
+          <button class="mt-4 px-4 py-2 rounded-md text-white" style="background: var(--brand)">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-stone-900 text-stone-200">
+    <div class="max-w-6xl mx-auto px-4 py-8 text-sm flex flex-col md:flex-row items-center justify-between gap-3">
+      <p>© 2025 Restaurante AH CARAY</p>
+      <p>Hecho con ❤️ y Tailwind</p>
+    </div>
+  </footer>
+
+  <script> lucide.createIcons(); </script>
+</body>
+</html>
